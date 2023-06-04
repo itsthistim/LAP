@@ -1,0 +1,385 @@
+---
+import { nextId } from '../models/db';
+import User from '../models/user';
+import { hash } from 'bcrypt';
+
+let loading = null;
+let values = null;
+const errors = { firstname: '', lastname: '', username: '', email: '', password: '', passwordConfirmed: '' };
+if (Astro.request.method === 'POST') {
+	loading = true;
+	values = { firstname: '', lastname: '', username: '', email: '', password: '', passwordConfirmed: '' };
+	try {
+		const data = await Astro.request.formData();
+		const firstname = data.get('firstname');
+		const lastname = data.get('lastname');
+		const username = data.get('username');
+		const email = data.get('email');
+		const password = data.get('password');
+		const passwordConfirmed = data.get('passwordConfirmed');
+
+		// prevent clearing the input fields
+		Object.assign(values, { firstname, lastname, username, email, password, passwordConfirmed });
+
+		// firstname must exist
+		if (typeof firstname !== 'string' || firstname.length < 1) {
+			errors.firstname = "First name can't be empty";
+		}
+
+		// lastname must exist
+		if (typeof lastname !== 'string' || lastname.length < 1) {
+			errors.lastname = "Last name can't be empty";
+		}
+
+		// username must exist, be valid and not taken
+		if (typeof username !== 'string' || username.length < 1) {
+			errors.username = "Username can't be empty";
+		} else if (isValidUsername(username) === false) {
+			errors.username = 'Username can only consist of letters, numbers, underscores, periods or hyphens';
+		} else if ((await usernameTaken(username)) === true) {
+			errors.username = 'Username is already taken';
+		}
+
+		// email must exist, be valid and not taken
+		if (typeof email !== 'string' || email.length < 1) {
+			errors.email = "Email can't be empty";
+		} else if (isValidEmail(email) === false) {
+			errors.email = 'Please enter a valid email address';
+		} else if ((await emailTaken(email)) === true) {
+			errors.email = 'There is already an account with this email address';
+		}
+
+		// password must exist and be valid
+		if (typeof password !== 'string' || password.length < 1) {
+			errors.password = 'Please enter a password';
+		} else if (isValidPassword(password) === false) {
+			errors.password = 'Password must be at least 8 characters long, contain at least one uppercase letter, one lowercase letter and one number';
+		}
+
+		// passwordConfirmed must exist and match the password
+		if (typeof passwordConfirmed !== 'string' || passwordConfirmed.length < 1) {
+			errors.passwordConfirmed = 'Please confirm your password';
+		} else if (password !== passwordConfirmed) {
+			errors.passwordConfirmed = 'Passwords do not match';
+		}
+
+		loading = false;
+
+		// if there are no errors, create the user and redirect to login
+		if (Object.values(errors).every((error) => error === '') === true) {
+			let user_id = await nextId('users');
+			let hashedPassword = await hash(password.toString(), 10);
+			let user = new User(user_id, firstname, lastname, username, email, hashedPassword);
+			user.save();
+
+			return Astro.redirect('/');
+		}
+	} catch (error) {
+		if (error instanceof Error) {
+			console.error(error.message);
+		}
+	}
+}
+
+async function emailTaken(email: string) {
+	return (await User.getByEmail(email)) !== null;
+}
+
+async function usernameTaken(username: string) {
+	return (await User.getByUsername(username)) !== null;
+}
+
+function isValidEmail(email: string) {
+	return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+function isValidPassword(password: string) {
+	// at least 8 characters, at least one uppercase letter, one lowercase letter and one number
+	// return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/.test(password);
+
+	return true; // TODO: add password validation
+}
+
+function isValidUsername(username: string) {
+	// letters, numbers, underscores, periods or hyphens
+	return /^[a-zA-Z0-9_.-]*$/.test(username);
+}
+---
+
+<section id="register" class="register">
+	<div class="container">
+		<div class="center">
+			<h2>Register</h2>
+			<h3>Create Your <span>Account</span></h3>
+			<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+		</div>
+
+		<div class="row mt-5">
+			<div class="col-lg-4"></div>
+			<div class="col-lg-4 mt-5 mt-lg-0">
+				<div class="row">
+					<div class="flex-c-m">
+						<a href="/auth/google" class="btn btn-google">
+							<i class="bx bxl-google"></i>
+						</a>
+						<a href="/auth/github" class="btn btn-github">
+							<i class="bx bxl-github"></i>
+						</a>
+						<a href="/auth/discord" class="btn btn-discord-alt">
+							<i class="bx bxl-discord-alt"></i>
+						</a>
+					</div>
+					<hr />
+
+					<form method="POST" role="form" class="login-form">
+						<div class="row">
+							<div class="col-md-6 form-group">
+								<input type="text" class="form-control rounded" name="firstname" id="firstname" placeholder="First Name" required value={values?.firstname} />
+								{errors.firstname && <div class="text-danger">{errors.firstname}</div>}
+							</div>
+							<div class="col-md-6 form-group mt-3 mt-md-0">
+								<input type="text" class="form-control rounded" name="lastname" id="lastname" placeholder="Last Name" required value={values?.lastname} />
+								{errors.lastname && <div class="text-danger">{errors.lastname}</div>}
+							</div>
+						</div>
+						<div class="form-group mt-3">
+							<input type="text" class="form-control rounded" name="username" id="username" placeholder="Username" required value={values?.username} />
+							{errors.username && <div class="text-danger">{errors.username}</div>}
+						</div>
+						<div class="form-group mt-3">
+							<input type="email" class="form-control rounded" name="email" id="email" placeholder="Email" required value={values?.email} />
+							{errors.email && <div class="text-danger">{errors.email}</div>}
+						</div>
+						<div class="form-group mt-3">
+							<input type="password" class="form-control rounded" name="password" id="password" placeholder="Password" required value={values?.password} />
+							{errors.password && <div class="text-danger">{errors.password}</div>}
+						</div>
+						<div class="form-group mt-3">
+							<input
+								type="password"
+								class="form-control rounded"
+								name="passwordConfirmed"
+								id="passwordConfirmed"
+								placeholder="Confirm Password"
+								required
+								value={values?.passwordConfirmed}
+							/>
+							{errors.passwordConfirmed && <div class="text-danger">{errors.passwordConfirmed}</div>}
+						</div>
+
+						<div class="my-3">
+							{loading === true && <div class="rounded loading">Loading...</div>}
+							{loading === false && Object.keys(errors).every((key) => errors[key] === '') && <div class="rounded sent-message">Successfuly created account</div>}
+						</div>
+
+						<div class="text-center"><button type="submit">Sign Up</button></div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.btn {
+		margin: 0px 30px 5px;
+	}
+
+	i {
+		font-size: 42px;
+		color: #444;
+		line-height: 1;
+		-webkit-transition: 0.3s;
+		transition: 0.3s;
+	}
+
+	i:hover {
+		color: #d01d3f;
+	}
+
+	.flex-c-m {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: flex;
+		justify-content: center;
+		-ms-align-items: center;
+		align-items: center;
+	}
+
+	.center {
+		text-align: center;
+	}
+
+	.center h2 {
+		font-size: 13px;
+		letter-spacing: 1px;
+		font-weight: 700;
+		padding: 8px 20px;
+		line-height: 1;
+		margin: 0;
+		background: #fdeff2;
+		color: #e43c5c;
+		display: inline-block;
+		text-transform: uppercase;
+		border-radius: 50px;
+	}
+
+	.center h3 {
+		margin: 15px 0 0 0;
+		font-size: 32px;
+		font-weight: 700;
+	}
+
+	.center h3 span {
+		color: #e43c5c;
+	}
+
+	.center p {
+		margin: 15px auto 0 auto;
+		font-weight: 600;
+	}
+
+	@media (min-width: 1024px) {
+		.center p {
+			width: 50%;
+		}
+	}
+
+	.register .info {
+		width: 100%;
+		background: #fff;
+	}
+
+	.register .info i {
+		font-size: 20px;
+		color: #e43c5c;
+		float: left;
+		width: 44px;
+		height: 44px;
+		background: #fdeff2;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50px;
+		transition: all 0.3s ease-in-out;
+	}
+
+	.register .info h4 {
+		padding: 0 0 0 60px;
+		font-size: 22px;
+		font-weight: 600;
+		margin-bottom: 5px;
+		color: #493c3e;
+	}
+
+	.register .info p {
+		padding: 0 0 0 60px;
+		margin-bottom: 0;
+		font-size: 14px;
+		color: #816a6e;
+	}
+
+	.register .info .email,
+	.register .info .phone {
+		margin-top: 40px;
+	}
+
+	.register .info .email:hover i,
+	.register .info .address:hover i,
+	.register .info .phone:hover i {
+		background: #e43c5c;
+		color: #fff;
+	}
+
+	.register .login-form {
+		width: 100%;
+		background: #fff;
+	}
+
+	.register .login-form .form-group {
+		padding-bottom: 8px;
+	}
+
+	.register .login-form .error-message {
+		color: #fff;
+		background: #ed3c0d;
+		text-align: left;
+		padding: 15px;
+		font-weight: 600;
+	}
+
+	.register .login-form .error-message br + br {
+		margin-top: 25px;
+	}
+
+	.register .login-form .sent-message {
+		color: #fff;
+		background: #18d26e;
+		text-align: center;
+		padding: 15px;
+		font-weight: 600;
+	}
+
+	.register .login-form .loading {
+		background: #fff;
+		text-align: center;
+		padding: 15px;
+	}
+
+	.register .login-form .loading:before {
+		content: '';
+		display: inline-block;
+		border-radius: 50%;
+		width: 24px;
+		height: 24px;
+		margin: 0 10px -6px 0;
+		border: 3px solid #18d26e;
+		border-top-color: #eee;
+		animation: animate-loading 1s linear infinite;
+	}
+
+	.register .login-form input,
+	.register .login-form textarea {
+		border-radius: 0;
+		box-shadow: none;
+		font-size: 14px;
+	}
+
+	.register .login-form input:focus,
+	.register .login-form textarea:focus {
+		border-color: #e43c5c;
+	}
+
+	.register .login-form input {
+		height: 44px;
+	}
+
+	.register .login-form textarea {
+		padding: 10px 12px;
+	}
+
+	.register .login-form button[type='submit'] {
+		background: #e43c5c;
+		border: 0;
+		padding: 10px 28px;
+		color: #fff;
+		transition: 0.4s;
+		border-radius: 50px;
+	}
+
+	.register .login-form button[type='submit']:hover {
+		background: #d01d3f;
+	}
+
+	@keyframes animate-loading {
+		0% {
+			transform: rotate(0deg);
+		}
+
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+</style>

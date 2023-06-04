@@ -1,0 +1,137 @@
+---
+export interface Props {
+	categories: string[];
+}
+
+import PortfolioDetail from './PortfolioDetail.astro';
+
+const { categories } = Astro.props;
+---
+
+<section id="portfolio" class="portfolio">
+	<div class="container">
+		<div class="section-title">
+			<h2>Portfolio</h2>
+			<h3>Check our <span>Portfolio</span></h3>
+			<p>Ut possimus qui ut temporibus culpa velit eveniet modi omnis est adipisci expedita at voluptas atque vitae autem.</p>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12 d-flex justify-content-center">
+				<ul id="portfolio-flters">
+					<li data-filter="*" class="filter-active">All</li>
+
+					{
+						categories.map((filter) => {
+							return <li data-filter={'.filter-' + filter.toLowerCase()}>{filter}</li>;
+						})
+					}
+				</ul>
+			</div>
+		</div>
+
+		<div class="row portfolio-container">
+			<PortfolioDetail category="App" title="App 1" description="Application Number 1" img="/img/portfolio/portfolio-1.jpg" href="/portfolio-details" />
+
+			<PortfolioDetail category="Web" title="Web 3" description="Web" img="/img/portfolio/portfolio-2.jpg" href="/portfolio-details" />
+
+			<PortfolioDetail category="App" title="App 2" description="App" img="/img/portfolio/portfolio-3.jpg" href="/portfolio-details" />
+
+			<PortfolioDetail category="Card" title="Card 2" description="Card" img="/img/portfolio/portfolio-4.jpg" href="/portfolio-details" />
+
+			<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+				<img src="/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="" />
+				<div class="portfolio-info">
+					<h4>Web 2</h4>
+					<p>Web</p>
+					<a href="/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
+					<a href="/portfolio-details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+				</div>
+			</div> -->
+
+			<PortfolioDetail category="Web" title="Web 2" description="Web" img="/img/portfolio/portfolio-5.jpg" href="/portfolio-details" />
+
+			<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+				<img src="/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="" />
+				<div class="portfolio-info">
+					<h4>App 3</h4>
+					<p>App</p>
+					<a href="/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
+					<a href="/portfolio-details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+				</div>
+			</div> -->
+
+			<PortfolioDetail category="App" title="App 3" description="App" img="/img/portfolio/portfolio-6.jpg" href="/portfolio-details" />
+
+			<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+				<img src="/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="" />
+				<div class="portfolio-info">
+					<h4>Card 1</h4>
+					<p>Card</p>
+					<a href="/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
+					<a href="/portfolio-details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+				</div>
+			</div> -->
+
+			<PortfolioDetail category="Card" title="Card 1" description="Card" img="/img/portfolio/portfolio-7.jpg" href="/portfolio-details" />
+
+			<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+				<img src="/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="" />
+				<div class="portfolio-info">
+					<h4>Card 3</h4>
+					<p>Card</p>
+					<a href="/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
+					<a href="/portfolio-details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+				</div>
+			</div> -->
+
+			<PortfolioDetail category="Card" title="Card 3" description="Card" img="/img/portfolio/portfolio-8.jpg" href="/portfolio-details" />
+
+			<!-- <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+				<img src="/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="" />
+				<div class="portfolio-info">
+					<h4>Web 3</h4>
+					<p>Web</p>
+					<a href="/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+					<a href="/portfolio-details" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+				</div>
+			</div> -->
+
+			<PortfolioDetail category="Web" title="Web 3" description="Web" img="/img/portfolio/portfolio-9.jpg" href="/portfolio-details" />
+		</div>
+	</div>
+</section>
+
+<style>
+	.portfolio #portfolio-flters {
+		padding: 0;
+		margin: 0 auto 25px auto;
+		list-style: none;
+		text-align: center;
+		border-radius: 50px;
+	}
+
+	.portfolio #portfolio-flters li {
+		cursor: pointer;
+		display: inline-block;
+		padding: 7px 17px 9px 17px;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1;
+		color: #444444;
+		margin: 0 3px 10px 3px;
+		transition: all ease-in-out 0.3s;
+		background: #ede9e9;
+		border-radius: 50px;
+	}
+
+	.portfolio #portfolio-flters li:hover,
+	.portfolio #portfolio-flters li.filter-active {
+		color: #fff;
+		background: #e43c5c;
+	}
+
+	.portfolio #portfolio-flters li:last-child {
+		margin-right: 0;
+	}
+</style>

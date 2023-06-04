@@ -1,0 +1,32 @@
+---
+export interface Props {
+	crumbs: any[];
+	title?: string;
+}
+
+const { crumbs, title = '' } = Astro.props;
+---
+
+<section id="breadcrumbs" class="breadcrumbs">
+	<div class="container">
+		<ol>
+			{
+				// if crumbs have a href, render a link, otherwise just the text
+				crumbs.map((crumbs) => {
+					if (crumbs.href) {
+						return (
+							<li>
+								<a href={crumbs.href}>{crumbs.name}</a>
+							</li>
+						);
+					} else {
+						return <li>{crumbs.name}</li>;
+					}
+				})
+			}
+		</ol>
+		{title && <h2>{title}</h2>}
+	</div>
+</section>
+
+<style></style>

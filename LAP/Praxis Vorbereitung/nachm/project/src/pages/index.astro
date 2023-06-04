@@ -1,0 +1,13 @@
+---
+//#region Layouts & Components
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';;
+import Hero from '../components/Index/Hero.astro';
+//#endregion
+---
+
+<Layout title="Home">
+	<Header isIndex={true} />
+	<Hero />
+	<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+</Layout>

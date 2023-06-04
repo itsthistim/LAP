@@ -1,0 +1,114 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+import '../styles/global.css';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+		<title>{title}</title>
+		<meta content="" name="description" />
+		<meta content="" name="keywords" />
+
+		<!-- Favicons -->
+		<link href="/img/favicon.png" rel="icon" />
+		<link href="/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+			rel="stylesheet"
+		/>
+
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+			integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- Boxicons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.4/css/boxicons.min.css"
+			integrity="sha512-cn16Qw8mzTBKpu08X0fwhTSv02kK/FojjNLz0bwp2xJ4H+yalwzXKFw/5cLzuBZCxGWIA+95X4skzvo8STNtSg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- Remix Icons -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.3.0/remixicon.min.css"
+			integrity="sha512-tgAW/YyQHq3WCbO/Dcp7LYKKAJdCNEx1Faa0iOEygzQF1ylLv6JkBuZoVeFOqKPpsqToJC2KwUJJx+t8VQnYCg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- Vendor CSS Files -->
+		<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+		<link href="/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+		<link href="/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+		<link href="/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+		<!-- =======================================================
+  * Template Name: Tempo
+  * Updated: Mar 10 2023 with Bootstrap v5.2.3
+  * Template URL: https://bootstrapmade.com/tempo-free-onepage-bootstrap-theme/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+	</head>
+
+	<body>
+		<slot />
+
+		<!-- Vendor JS Files -->
+		<script is:inline src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script is:inline src="/vendor/glightbox/js/glightbox.min.js"></script>
+		<script is:inline src="/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+		<script is:inline src="/vendor/swiper/swiper-bundle.min.js"></script>
+		<script is:inline src="/vendor/php-email-form/validate.js"></script>
+
+		<!-- Template Main JS File -->
+		<script is:inline src="/js/main.js"></script>
+	</body>
+</html>
+
+<style>
+	:root {
+		--primary: #e43c5c;
+
+		/* primary lighter */
+		--primary-l-9: color-mix(in srgb, var(--primary) 10%, white);
+		--primary-l-8: color-mix(in srgb, var(--primary) 20%, white);
+		--primary-l-7: color-mix(in srgb, var(--primary) 30%, white);
+		--primary-l-6: color-mix(in srgb, var(--primary) 40%, white);
+		--primary-l-5: color-mix(in srgb, var(--primary) 50%, white);
+		--primary-l-4: color-mix(in srgb, var(--primary) 60%, white);
+		--primary-l-3: color-mix(in srgb, var(--primary) 70%, white);
+		--primary-l-2: color-mix(in srgb, var(--primary) 80%, white);
+		--primary-l-1: color-mix(in srgb, var(--primary) 90%, white);
+
+		/* primary darker */
+		--primary-d-9: color-mix(in srgb, var(--primary) 10%, black);
+		--primary-d-8: color-mix(in srgb, var(--primary) 20%, black);
+		--primary-d-7: color-mix(in srgb, var(--primary) 30%, black);
+		--primary-d-6: color-mix(in srgb, var(--primary) 40%, black);
+		--primary-d-5: color-mix(in srgb, var(--primary) 50%, black);
+		--primary-d-4: color-mix(in srgb, var(--primary) 60%, black);
+		--primary-d-3: color-mix(in srgb, var(--primary) 70%, black);
+		--primary-d-2: color-mix(in srgb, var(--primary) 80%, black);
+		--primary-d-1: color-mix(in srgb, var(--primary) 90%, black);
+	}
+</style>

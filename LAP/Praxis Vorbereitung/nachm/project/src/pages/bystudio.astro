@@ -1,0 +1,334 @@
+---
+//#region Layouts & Components
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Breadcrumbs from "../components/Single/Breadcrumbs.astro";
+import BackToTop from "../components/BackToTop.astro";
+//#endregion
+
+//#region Form Validation
+import Film from "../models/film";
+import moment from "moment";
+
+let loading = null;
+let values = null;
+
+const errors = { studio: "", general: "" };
+let results = [];
+
+if (Astro.request.method === "POST") {
+  loading = true;
+  values = { studio: "" };
+
+  try {
+    const data = await Astro.request.formData();
+    const studio = data.get("studio");
+
+    // prevent clearing the input fields
+    Object.assign(values, { studio });
+
+    // validate text search
+    if (typeof studio !== "string" || studio.length < 1) {
+      errors.studio = "Das Suchfeld kann nicht leer sein.";
+    }
+
+    // get films by studio
+    results = await Film.getByStudio(studio.toString());
+
+    if (!results) {
+      errors.general = "Produktionsfirma nicht gefunden!";
+    }
+
+    loading = false;
+  } catch (error) {
+    loading = false;
+    errors.general = "Bei der Suche ist ein Fehler aufgetreten.";
+    console.log(error);
+  }
+}
+
+//#endregion
+---
+
+<Layout title="Produktionsfirma">
+  <Header isIndex={false} />
+  <Breadcrumbs crumbs={[{ name: "Home", href: "/" }, { name: "Produktionsfirma" }]} />
+
+  <main id="main">
+    <section id="register" class="register">
+      <div class="container">
+        <div class="center">
+          <h2>Nach Produktionsfirma</h2>
+          <h3>Finde deinen <span>Lieblingsfilm</span></h3>
+          <p>Durchsuche unsere Datenbank nach einer <strong>Produktionsfirma</strong> deines Lieblingsfilms und finde neue Favoriten.</p>
+        </div>
+
+        <div class="mx-auto mt-4" style="width: 388px;">
+          <form method="POST" role="form" class="login-form">
+            <div class="form-group">
+              <input type="text" class="form-control rounded" name="studio" id="studio" placeholder="Produktionsfirma" required value={values?.studio} />
+              {errors.studio && <div class="text-danger">{errors.studio}</div>}
+            </div>
+
+            <div class="my-3">
+              {loading === true && <div class="rounded loading">Loading...</div>}
+            </div>
+
+            <div class="row text-center">
+              <div class="col form-group">
+                <button type="submit">Suchen</button>
+              </div>
+              <div class="col form-group">
+                <button type="button" onclick="location.href = '/';">Abbrechen</button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        {
+          errors.general && (
+            <div class="mx-auto my-5 center" style="width: 900px">
+              <h4>{errors.general}</h4>
+              <p>Versuchen Sie es später erneut.</p>
+            </div>
+          )
+        }
+
+        {
+          results && results?.length > 0 && !errors.general && (
+            <div class="mx-auto my-4" style="width: 900px">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Titel</th>
+                    <th scope="col">Erscheinungsdatum</th>
+                    <th scope="col">Produktionsfirma</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {results.map((film) => {
+                    return (
+                      <tr>
+                        <th scope="row">{film.id}</th>
+                        <td>{film.title}</td>
+                        <td>{moment(film.release).format("DD.MM.YYYY")}</td>
+                        <td>{film.studio}</td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          )
+        }
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<BackToTop />
+
+<style>
+  .btn {
+    margin: 0px 30px 5px;
+  }
+
+  i {
+    font-size: 30px;
+    color: #444;
+    line-height: 1;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  i:hover {
+    color: var(--primary);
+  }
+
+  .flex-c-m {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .center h2 {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
+    line-height: 1;
+    margin: 0;
+    background: #fdeff2;
+    color: #e43c5c;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+  }
+
+  .center h3 {
+    margin: 15px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  .center h3 span {
+    color: #e43c5c;
+  }
+
+  .center p {
+    margin: 15px auto 0 auto;
+    font-weight: 600;
+  }
+
+  @media (min-width: 1024px) {
+    .center p {
+      width: 50%;
+    }
+  }
+
+  .register .info {
+    width: 100%;
+    background: #fff;
+  }
+
+  .register .info i {
+    font-size: 20px;
+    color: #e43c5c;
+    float: left;
+    width: 44px;
+    height: 44px;
+    background: #fdeff2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .register .info h4 {
+    padding: 0 0 0 60px;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #493c3e;
+  }
+
+  .register .info p {
+    padding: 0 0 0 60px;
+    margin-bottom: 0;
+    font-size: 14px;
+    color: #816a6e;
+  }
+
+  .register .info .email,
+  .register .info .phone {
+    margin-top: 40px;
+  }
+
+  .register .info .email:hover i,
+  .register .info .address:hover i,
+  .register .info .phone:hover i {
+    background: #e43c5c;
+    color: #fff;
+  }
+
+  .register .login-form {
+    width: 100%;
+    background: #fff;
+  }
+
+  .register .login-form .form-group {
+    padding-bottom: 8px;
+  }
+
+  .register .login-form .error-message {
+    color: #fff;
+    background: #ed3c0d;
+    text-align: left;
+    padding: 15px;
+    font-weight: 600;
+  }
+
+  .register .login-form .error-message br + br {
+    margin-top: 25px;
+  }
+
+  .register .login-form .sent-message {
+    color: #fff;
+    background: #18d26e;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+  }
+
+  .register .login-form .loading {
+    background: #fff;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .register .login-form .loading:before {
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin: 0 10px -6px 0;
+    border: 3px solid #18d26e;
+    border-top-color: #eee;
+    animation: animate-loading 1s linear infinite;
+  }
+
+  .register .login-form input,
+  .register .login-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+  }
+
+  .register .login-form input:focus,
+  .register .login-form textarea:focus {
+    border-color: #e43c5c;
+  }
+
+  .register .login-form input {
+    height: 44px;
+  }
+
+  .register .login-form textarea {
+    padding: 10px 12px;
+  }
+
+  .register .login-form button {
+    background: #e43c5c;
+    border: 0;
+    padding: 10px 28px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 50px;
+  }
+
+  .register .login-form button:hover {
+    background: #d01d3f;
+  }
+
+  @keyframes animate-loading {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
