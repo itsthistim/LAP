@@ -1,4 +1,4 @@
-#Grundkenntnisse
+#Grundkenntnisse_Programmieren
 ***
 Fokus auf der Abfolge von Prozeduren
 In Prozeduren u. Funktionen organisiert

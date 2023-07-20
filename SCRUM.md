@@ -1,4 +1,4 @@
-#Grundkenntnisse #Projektmanagement 
+#Grundkenntnisse_Programmieren #Projektmanagement 
 ***
 Besteht aus
 - Product Owner: Organisiert Aufgaben

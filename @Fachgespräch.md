@@ -1,29 +1,27 @@
 ***
-```toc
-```
-***
 ```xdataview
-LIST FROM "LAP"
+LIST FROM ""
 ```
 *** 
 ## 1) Grundlagen der Informatik
-- Kenntnis des Zeichensatzes [[Zeichencodierung|ASCII]]
-- Kenntnis der Einheiten [[Bit & Byte]]
-- Kenntnis der Begriffe [[Datenmengen|Gigabyte, Terabyte, Petabyte, Exabyte]]
-- Kenntnis der Bergriffe [[Datenmengen|Gibibyte, Tebibyte, Pebibyte, Exbibyte]])
+- Kenntnis des Zeichensatzes [[ASCII]]
+- Kenntnis der Einheiten [[Datenmengen#Bits und Bytes|Bit und Byte]]
+- Kenntnis der Begriffe [[Datenmengen#Dezimale Einheiten||Gigabyte, Terabyte, Petabyte, Exabyte]]
+- Kenntnis der Bergriffe [[Datenmengen#Binäre Einheiten||Gibibyte, Tebibyte, Pebibyte, Exbibyte]])
 - Kenntnis der gebräuchlichen [[Zahlensysteme]] in der IT
-- Umwandlungen zwischen [[Zahlensysteme|Binär-, Dezimal-, und Hexadezimalzahlen]]
+- Umwandlungen zwischen [[Zahlensysteme#Umwandlung|Binär-, Dezimal-, und Hexadezimalzahlen]]
+- [[Logikschaltungen]] (AND, OR, XOR, NOT) und deren Wahrheitstabellen
 
 ## 2) Betriebssysteme und Software
 - Fachbegriff [[Betriebssysteme|Betriebssystem]]
 - Kenntnis der am [[Betriebssysteme|Markt führend verbreiteten Betriebssysteme]]
 - Kenntnisse über [[Betriebssysteme|Desktop-Betriebssysteme]]
 - Fachbegriff [[Firmware]]
-- Fachbegriff [[Systemprogramm]], [[Anwendungsprogram]]
-- Fachbegriff [[Betriebssysteme|Mutlitasking-Betriebssystem]]
-- Fachbegriffe [[Betriebssysteme|Single-User-System, Multi-User-System]]
+- Fachbegriff [[Systemprogramm]], [[Anwendungsprogramm]]
+- Fachbegriff [[Betriebssysteme#Multitasking-Betriebssystem|Mutlitasking-Betriebssystem]]
+- Fachbegriffe [[Betriebssysteme#Single-User-System|Single-User-System]], [[Betriebssysteme#Multi-User-System|Multi-User-System]]
 - Kenntnis über die [[PowerShell]] (inkl. einfacher Befehle)
-- Kenntnisse über grafische Oberflächen unter [[Linux]]
+- Kenntnisse über grafische Oberflächen unter [[Betriebssysteme#Grafische Oberflächen|Linux]]
 - Fachbegriff [[Dateisystem]]
 
 ## 3) Betreuung von mobiler Hardware
@@ -127,7 +125,7 @@ LIST FROM "LAP"
 - Unterschied [[FIFO]] / [[LIFO]] Prinzip
 - Fachbegriffe [[Stack]] und [[Queue]]
 - Fachbegriff [[Userinterface]] (Arten, Regeln für Entwurf, Gestaltungshilfen/Toolkits/Frameworks)
-- Fachbegriff [[Zeichencodierung]] (ASCII, ISO-Latin, Unicode, … – Unterschiede und Verwendung)
+- Fachbegriff [[ASCII]] (ASCII, ISO-Latin, Unicode, … – Unterschiede und Verwendung)
 - Standards ANSI, ISO, IEEE
 - Fachbegriff [[Frame]]
 - Fachbegriff [[Webservices]] (verteiltes System für heterogene Systeme, …)
