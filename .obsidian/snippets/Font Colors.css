@@ -1,0 +1,52 @@
+body {
+    --code-normal: #eb5757;
+    --code-background: #2f2f2d; /*#282c34*/
+}
+
+span .red {
+    color: var(--code-normal);
+}
+
+span .green {
+    color: #48e68a;
+}
+
+span .blue {
+    color: #56ccf2;
+}
+
+span .yellow {
+    color: #fded5a;
+}
+
+span .purple {
+    color: #bb6bd9;
+}
+
+span .orange {
+    color: #f2994a;
+}
+
+span .gray {
+    color: #828282;
+}
+
+span .white {
+    color: #ffffff;
+}
+
+span .black {
+    color: #000000;
+}
+
+span .pink {
+    color: #fa6bff;
+}
+
+span .brown {
+    color: #a0522d;
+}
+
+span .cyan {
+    color: #2fc4b2;
+}

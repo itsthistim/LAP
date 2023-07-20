@@ -1,0 +1,21 @@
+{
+  "spellcheck": true,
+  "spellcheckLanguages": [
+    "en-GB",
+    "de",
+    "de-DE",
+    "en-US"
+  ],
+  "showUnsupportedFiles": true,
+  "attachmentFolderPath": "Config/Media",
+  "alwaysUpdateLinks": true,
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "livePreview": true,
+  "newFileLocation": "current"
+}

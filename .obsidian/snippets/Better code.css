@@ -1,0 +1,38 @@
+/* ############ Inline code ############ */
+
+body {
+    --code-normal: #eb5757;
+    --code-background: #2f2f2d;
+    /*#282c34*/
+}
+
+/* ############ Codeblocks ############ */
+
+.cm-inline-code {
+    border-radius: 4px;
+}
+
+/* indivudual lines are scrollable */
+.HyperMD-codeblock.cm-line:not(.cm-active) {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+/* hide scrollbars */
+.HyperMD-codeblock.cm-line:not(.cm-active)::-webkit-scrollbar {
+    display: none;
+}
+
+/* kinda fix code block flair */
+.markdown-source-view.mod-cm6 .code-block-flair {
+    top: 0px;
+}
+
+/* entire codeblock is scrollable (but only in reading view) */
+.markdown-reading-view code[class*="language-"] {
+    overflow-x: scroll;
+    white-space: pre;
+    padding: 15px 0px;
+}
+
