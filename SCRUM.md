@@ -1,7 +1,7 @@
 #Grundkenntnisse_Programmieren #Projektmanagement 
 ***
 Besteht aus
-- Product Owner: Organisiert Aufgaben
+- Product Owner: Organisiert Aufgaben (meist [[Projektleiter]]?)
 - SCRUM-Team: Bearbeitet einzeln und selbstorganisiert die Aufgaben
 - SCRUM-Master: Achtet darauf, dass SCRUM-Regeln eingehalten werden.
 

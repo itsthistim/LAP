@@ -17,4 +17,4 @@
 
 
 `*` String ist *oft* kein Primitiver Datentyp bei vielen Programmiersprachen sondern oft eine Array mit Chars (`char[]`)
--> also eine Datenstruktur!
+→ also eine Datenstruktur!
