@@ -5,7 +5,7 @@ Besteht aus
 - SCRUM-Team: Bearbeitet einzeln und selbstorganisiert die Aufgaben
 - SCRUM-Master: Achtet darauf, dass SCRUM-Regeln eingehalten werden.
 
-- Stakeholder: Kunde
+- Stakeholder: Kunde (eine Interessensgruppe, die nicht direkt mit der Entwicklung selbst zu tun habt)
 
 Aufgaben
 - Backlog: dynamische Liste der Aufgaben, vom Product Owner verwaltet

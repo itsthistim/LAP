@@ -2,6 +2,18 @@
 ***
 Konzept zur *Speicherung und Organisation von Daten* auf einem *Speichermedium* wie Festplatten, SSD oder Flash-Speicher.
 
-Es stell die Struktur und Zugriff auf Dateien und Verzeichnisse bereit und verwaltet die physische Speicherung der Daten. Die Organisation der Daten und Verzeichnisse erfolgt hierarchisch (Wurzelverzeichnis, Unterordner). Für den Dateizugriff werden Lese- und Schreibzugriff auf Dateien ermöglicht, ebenso stehen Schnittstellen und Funktionen zur Änderung, Löschung, Lesen und Schreiben der Dateien bereit.
+- *verwaltet* die physische *Speicherung* der Daten
+- macht *Zugriff auf Dateien* möglich
+- *hierarchisch*e Organisation (Wurzelverzeichnis, Unterordner)
+- Schnittstellen und Funktionen für *CRUD Operationen* (Create, Read, Update, Delete)
 
-Dateisystemtypen: NTFS, FAT32 unter Windows, ext4 unter Linux, HFS+ unter Mac.
+# Dateisystemtypen
+## Windows
+- *NTFS* (New Technology File System) → Standard
+- *FAT32* (File Allocation Table 32) → älter
+
+## Linux
+- *ext4* (Fourth Extended File System)
+
+## Mac
+- *APFS* (Apple File System) → Standard

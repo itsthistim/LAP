@@ -4,7 +4,7 @@ LIST FROM ""
 ```
 *** 
 ## 1) Grundlagen der Informatik
-- Kenntnis des Zeichensatzes [[ASCII]]
+- Kenntnis des Zeichensatzes [[Zeichensätze#ASCII|ASCII]]
 - Kenntnis der Einheiten [[Datenmengen#Bits und Bytes|Bit und Byte]]
 - Kenntnis der Begriffe [[Datenmengen#Dezimale Einheiten||Gigabyte, Terabyte, Petabyte, Exabyte]]
 - Kenntnis der Bergriffe [[Datenmengen#Binäre Einheiten||Gibibyte, Tebibyte, Pebibyte, Exbibyte]])
@@ -25,10 +25,10 @@ LIST FROM ""
 - Fachbegriff [[Dateisystem]]
 
 ## 3) Betreuung von mobiler Hardware
-- Technische Merkmale von [[Smartphones]]
-- Technische Merkmale von [[Tablets]]
-- Kenntnisse über [[Android]]
-- Kenntnisse über [[IOS]]
+- Technische Merkmale von [[Mobilgeräte|Smartphones]]
+- Technische Merkmale von [[Mobilgeräte|Tablets]]
+- Kenntnisse über [[Betriebssysteme#Android|Android]]
+- Kenntnisse über [[Betriebssysteme#iOS|iOS]]
 - Fachbegriff [[QR-Codes|QR-Code]]
 - Vor- und Nachteile von [[Geschlossenes System|geschlossenen Systemen]] mit Betriebssystem und App-Store
 
@@ -44,32 +44,32 @@ LIST FROM ""
 - Kenntnis über [[DSGVO]] (Datenschutzgrundverordnung)
 - Fachbegriff [[Datenminimierung]] im Zusammenhang der DSGVO
 - Fachbegriff [[Betroffene Personen|betroffene Personen]], Verantwortlicher, Auftragsverarbeiter
-- Kenntnis über Rechte von [[Betroffene Personen|betroffene Personen]] lt. DSGVO
-- Fachbegriff [[Personenbezogene / Sensible Daten|personenbezogene und sensible Daten]] lt. DSGVO
+- Kenntnis über Rechte von [[Betroffene Personen#Rechte betroffener Personen|betroffene Personen]] lt. DSGVO
+- Fachbegriff [[Personenbezogene und Sensible Daten|personenbezogene und sensible Daten]] lt. DSGVO
 - Bedeutung von [[Kopplungsverbot]] lt. DSGVO
 - [[Datenschutzbeauftragter]] lt. DSGVO und dessen Funktionen
 - Pflichten für Unternehmen bei bekannt gewordenen [[Datendiebstahl|Datendiebstählen]] lt. DSGVO
-- Kenntnisse über Grundbegriffe und Gültigkeitsbereich des [[Urheberrechts]]
+- Kenntnisse über Grundbegriffe und Gültigkeitsbereich des [[Urheberrecht]]
 - Kenntnis gesetzlicher [[Gewährleistungs- und Garantiebestimmungen]] und deren unterschiedlicher Anwendung bei Hardware- und Softwareproblemen
 - Kenntnisse über umweltgerechte [[Entsorgung von Elektronikschrot]], Toner, Akkus oder Batterien
 - Kenntnis über das [[E-Commerce-Gesetzt (ECG)]]
 - Kenntnis über das [[Telekom-Gesetz (TKG)]]
-- Kenntnisse über [[Pflichtangaben]] eines Homepage-Betreibers (Impressum)
-- Kenntnisse über [[Pflichtangaben]] beim E-Mail-Verkehr von Unternehmen
+- Kenntnisse über [[Pflichtangaben#Impressum|Pflichtangaben eines Homepage-Betreibers]]
+- Kenntnisse über [[Pflichtangaben#Email|Pflichtangaben beim E-Mail-Verkehr]] von Unternehmen
 - Kenntnisse über die gesetzliche Einhaltung von [[Bildschirmpausen]]
 
 ## 6) Netzwerkdienste
 - Fachbegriffe [[Domain|Domain, Sub-Domain und Top-Level-Domain]]
 - Kenntnis der Web-Protokolle [[HTTP und HTTPS]]
-- Funktionsprinzip eines [[Mail-Server]]s
-- Kenntnis der Mail-Protokolle [[POP3]] und POP3s
-- Kenntnis der Mail-Protokolle [[IMAP]] und IMAPS
-- Kenntnis der Mail-Protokolle [[SMTP]] und SMTPS
-- Kenntnisse über [[FTP]] und FTPS
+- Funktionsprinzip eines [[Mail-Server|Mail-Servers]]
+- Kenntnis der Mail-Protokolle [[POP3|POP3 und POP3s]]
+- Kenntnis der Mail-Protokolle [[IMAP|IMAP und IMAPS]]
+- Kenntnis der Mail-Protokolle [[SMTP|SMTP und SMTPS]]
+- Kenntnisse über [[FTP|FTP und FTPS]]
 - Kenntnisse über [[SSL]]
 - Fachbegriff [[Cloud-Computing]]
 - Kenntnisse über [[Clound-Dienste|Private/Public/Hybrid Cloud]]
-- Fachbegriffe [[IaaS]], [[PaaS]], [[SaaS]]
+- Fachbegriffe [[IaaS, PaaS, SaaS]]
 - Beispiele für marktbekannte [[Cloud-Dienste]]
 - Kriterien und Voraussetzungen für den Einsatz von [[Cloud-Dienste]]n
 
@@ -125,8 +125,8 @@ LIST FROM ""
 - Unterschied [[FIFO]] / [[LIFO]] Prinzip
 - Fachbegriffe [[Stack]] und [[Queue]]
 - Fachbegriff [[Userinterface]] (Arten, Regeln für Entwurf, Gestaltungshilfen/Toolkits/Frameworks)
-- Fachbegriff [[ASCII]] (ASCII, ISO-Latin, Unicode, … – Unterschiede und Verwendung)
-- Standards ANSI, ISO, IEEE
+- Fachbegriff [[Zeichensätze]] (ASCII, ISO-Latin, Unicode, … – Unterschiede und Verwendung)
+- Standards [[ANSI, ISO, IEEE]]
 - Fachbegriff [[Frame]]
 - Fachbegriff [[Webservices]] (verteiltes System für heterogene Systeme, …)
 - Kenntnisse über Standards (SOAP, WSDL, …)
@@ -175,6 +175,9 @@ LIST FROM ""
 - Fachbegriff [[Meilenstein]]
 - Unterschiede [[internes/externes Projekt]]
 - Kenntnis [[Projektkostenplanung]]
+
+## 13) 
+- Stakeholder
 
 ## 14) Qualitätssicherung
 - [[Versionierung]] (mit VCS) und deren Nutzung

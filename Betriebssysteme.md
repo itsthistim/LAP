@@ -83,8 +83,11 @@ Für Linux gibt es u.a. *Distributionen* wie *GNOME*, *KDE*, *Ubuntu* und *Fedor
 ## Android
 - von Google
 - für *Mobilgeräte* wie Smartphone und Tablets
+- auf Linux basierend
+- open-source
 
 ## iOS
 - von Apple
 - für *Mobilgeräte* wie Smartphone und Tablets
 - speziell für iPhones, iPads und iPods
+- closed-source → weniger Möglichkeiten für User "dummes zu tun"
