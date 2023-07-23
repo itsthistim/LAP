@@ -36,14 +36,15 @@ Transport Layer Security
 - *Handshake Protokoll* zum Aufbau einer sicheren Verbindung
 
 ## Asymmetrische und Symmetrische Verschlüsselung
+### Asymmetrisch
 - Schlüsselpaar: Öffentlicher Schlüssel (Verschlüsselung) + Privater Schlüssel (Entschlüsselung)
-- Öffentlicher Schlüssel verschlüsselt
-- Privater Schlüssel entschlüsselt
-- Sicherer Austausch des öffentlichen Schlüssels
-- Langsamer, aber Schlüsselaustausch ohne Vorwissen
+- *Öffentlicher* Schlüssel *verschlüsselt*
+- *Privater* Schlüssel *entschlüsselt*
+- *Sicherer Austausch* des öffentlichen Schlüssels
+- *Langsamer*, aber Schlüsselaustausch ohne Vorwissen
 
-Symmetrische Verschlüsselung (Private Key):
-- Derselbe Schlüssel für Verschlüsselung und Entschlüsselung
-- Schneller als asymmetrische Verschlüsselung
-- Erfordert sicheren Vorab-Schlüsselaustausch
-- Häufig für Datenübertragung nach asymmetrischer Verschlüsselung
+### Symmetrisch
+- *Gleicher Schlüssel* für *Verschlüsselung und Entschlüsselung*
+- *Schneller* als asymmetrische Verschlüsselung
+- Erfordert *sicheren Vorab-Schlüsselaustausch*
+- Häufig für *Datenübertragung nach asymmetrischer Verschlüsselung*

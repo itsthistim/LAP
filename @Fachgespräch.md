@@ -66,7 +66,7 @@ LIST FROM ""
 - Kenntnis der Mail-Protokolle [[IMAP|IMAP und IMAPS]]
 - Kenntnis der Mail-Protokolle [[SMTP|SMTP und SMTPS]]
 - Kenntnisse über [[FTP|FTP und FTPS]]
-- Kenntnisse über [[SSL & TSL]]
+- Kenntnisse über [[SSL & TLS]]
 - Fachbegriff [[Cloud-Computing]]
 - Kenntnisse über [[Clound-Dienste|Private/Public/Hybrid Cloud]]
 - Fachbegriffe [[IaaS, PaaS, SaaS]]
