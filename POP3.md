@@ -2,8 +2,10 @@
 ***
 Post Office Protocol Version 3
 
-- E-Mails von einem Mail-Server auf ein lokales Gerät herunterzuladen
-- Ermöglicht dem E-Mail-Client (z. B. Outlook) den *Zugriff auf das Postfach* des Servers und das *Abrufen von E-Mails*.
+- Übertragung von *E-Mails* von *Server zu Client*.
+- *Verwaltung* von E-Mails *auf **Client***
+
+- *keine Synchronisierung zwischen Geräten*
 
 
 ## POP3S (POP3 Secure)
