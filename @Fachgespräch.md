@@ -144,8 +144,8 @@ LIST FROM ""
 - Fachbegriff [[Responsive Webdesign]], Umsetzung Kenntnisse über Konzept Mobile First
 - Kenntnisse über [[aktuelle Programmiersprachen]]
 - Kenntnisse über [[Programmiersprachen für mobile Anwendungen]]/Internet
-- Kenntnisse über die Anwendung von [[JAVA]]-Technologien im Web (Servlets, Java-Server-Pages)
-- Grundkenntnisse über die Anwendung der [[.NET]]-Technologien im Web (ASP.NET)
+- Kenntnisse über die Anwendung von [[Java-Technologien im Web]] (Servlets, Java-Server-Pages)
+- Grundkenntnisse über die Anwendung der [[.NET-Technologien im Web]] (ASP.NET)
 - Fachbegriff [[Metadaten]]
 - [[Prinzipien der Softwareentwicklung]]: KISS, DRY
 - Kenntnisse über Coding-Standards/[[Code-Konventionen]]

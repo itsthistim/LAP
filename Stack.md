@@ -1,6 +1,6 @@
 #Informatik 
 ***
-Nach dem [[LIFO]]-Prinzip funktionierende Datenstruktur
+Nach dem [[LIFO]]-Prinzip funktionierende [[Datentypen & Datenstrukturen|Datenstruktur]]
 
 - Push → fügt ein Element oben auf den Stack hinzu
 - Pop → entfernt das oberste Element

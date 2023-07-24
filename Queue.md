@@ -2,7 +2,7 @@
 ***
 #Informatik 
 ***
-Nach dem [[FIFO]]-Prinzip funktionierende Datenstruktur
+Nach dem [[FIFO]]-Prinzip funktionierende [[Datentypen & Datenstrukturen|Datenstruktur]]
 
 - Enqueue → fügt ein Element "hinten" hinzu
 - Dequeue → entfernt das "vorderste" Element
