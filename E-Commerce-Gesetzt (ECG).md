@@ -17,7 +17,7 @@ angeben.
 
 
 ## Widerrufsrecht
-Ein Online-Händler muss seinen Kunden ein Widerrufsrecht gewähren, das es ihnen ermöglicht, inne*rhalb einer bestimmten Frist Produkte zurückzugeben* oder *Verträge zu kündigen*, *ohne einen Grund* angeben zu müssen.
+Ein Online-Händler muss seinen Kunden ein Widerrufsrecht gewähren, das es ihnen ermöglicht, *innerhalb einer bestimmten Frist Produkte zurückzugeben* oder *Verträge zu kündigen*, *ohne einen Grund* angeben zu müssen.
 
 
 ## Haftungsbeschränkung

@@ -93,18 +93,18 @@ LIST FROM ""
 - Schutzmöglichkeiten vor [[Cookies|Cookie-Tracking und Cookieless-Tracking]]
 - Kenntnisse über die Gefahr von [[Identitätsdiebstahl]]
 - Fachbegriff [[Netzneutralität]]
-- Kenntnisse über Vor- und Nachteile bei Nutzung von [[biometrische Daten||biometrischen Daten]]
+- Kenntnisse über Vor- und Nachteile bei Nutzung von [[Biometrische Daten]]
 - Inhalte von [[Unternehmensrichtlinien sozialer Netzwerke|Unternehmensrichtlinien für Nutzung von sozialen Netzwerken]]
 
 ## 9) Ergonomische Gestaltung eines Arbeitsplatzes
 - Kenntnisse über die [[ergonomische Einrichtung]] eines Bildschirmarbeitsplatzes
 - Kenntnisse über den [[ergonomische Einrichtung|optimalen Aufstellungsort von Bildschirmen]] (Lichteinfall)
-- Kenntnisse der [[gesetzliche Pausen|gesetzlichen Bestimmungen von Pausen]] bei Bildschirmarbeit
+- Kenntnisse der [[Bildschirmpausen|gesetzlichen Bestimmungen von Pausen]] bei Bildschirmarbeit
 - Kenntnisse über die [[ergonomische Einrichtung|ideale Höhe von Tisch/Tastatur, Bildschirmoberkante und Bildschirmabstand zum Benutzer]]
 - Kenntnisse über [[ergonomische Einrichtung|Schutzmaßnahmen]] zur Vorbeugung körperlicher Schäden bei sitzender Tätigkeit Kenntnisse über körperliche Entspannungsübungen bei sitzender Tätigkeit
 
 ## 10) Fachberatung, Planung
-- Führen von fachspezifischen [[Verkaufsgespräche & Produktberatung|Verkaufsgesprächen, Produktberatung]]
+- Führen von fachspezifischen [[Verkaufsgespräche & Produktberatung]]
 - Kompetenz, technische Zusammenhänge [[Verkaufsgespräche & Produktberatung|beratend]] erklären zu können
 - [[Verkaufsgespräche & Produktberatung|Beratung]] und Erstellen kundenorientierter Softwarelösungen
 - Kenntnisse über richtigen Umgang bei [[Reklamationen]]
@@ -177,7 +177,7 @@ LIST FROM ""
 - Kenntnis [[Projektkostenplanung]]
 
 ## 13) 
-- Stakeholder
+- Fachbegriff [[SCRUM#^ecic87|Stakeholder]]
 
 ## 14) Qualitätssicherung
 - [[Versionierung]] (mit VCS) und deren Nutzung

@@ -1,11 +1,12 @@
 #Grundkenntnisse_Programmieren #Projektmanagement 
 ***
+
 Besteht aus
-- Product Owner: Organisiert Aufgaben (meist [[Projektleiter]]?)
+- Product Owner: Organisiert Aufgaben --> [[Projektleiter]]
 - SCRUM-Team: Bearbeitet einzeln und selbstorganisiert die Aufgaben
 - SCRUM-Master: Achtet darauf, dass SCRUM-Regeln eingehalten werden.
 
-- Stakeholder: Kunde (eine Interessensgruppe, die nicht direkt mit der Entwicklung selbst zu tun habt)
+- Stakeholder: Kunde (eine Interessensgruppe, die nicht direkt mit der Entwicklung selbst zu tun habt) ^ecic87
 
 Aufgaben
 - Backlog: dynamische Liste der Aufgaben, vom Product Owner verwaltet

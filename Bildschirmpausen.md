@@ -1,4 +1,4 @@
-#Gesetzliche_Bestimmungen
+#Gesetzliche_Bestimmungen #Ergonomie 
 ***
 Bildschirmpausen sind *regelmäßige Unterbrechungen der Bildschirmarbeit*, um die *Belastung der Augen zu reduzieren*.
 
