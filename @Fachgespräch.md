@@ -53,7 +53,7 @@ LIST FROM ""
 - Kenntnis gesetzlicher [[Gewährleistungs- und Garantiebestimmungen]] und deren unterschiedlicher Anwendung bei Hardware- und Softwareproblemen
 - Kenntnisse über umweltgerechte [[Entsorgung von Elektronikschrot]], Toner, Akkus oder Batterien
 - Kenntnis über das [[E-Commerce-Gesetzt (ECG)]]
-- Kenntnis über das [[Telekom-Gesetz (TKG)]]
+- Kenntnis über das [[Telekommunikationsgesetz (TKG)]]
 - Kenntnisse über [[Pflichtangaben#Impressum|Pflichtangaben eines Homepage-Betreibers]]
 - Kenntnisse über [[Pflichtangaben#Email|Pflichtangaben beim E-Mail-Verkehr]] von Unternehmen
 - Kenntnisse über die gesetzliche Einhaltung von [[Bildschirmpausen]]
@@ -74,7 +74,7 @@ LIST FROM ""
 - Kriterien und Voraussetzungen für den Einsatz von [[Cloud-Dienste]]n
 
 ## 7) IT-Security und Betriebssicherheit
-- Kenntnisse über Gefahren von [[Internet Security|Viren, Würmern, Trojanern, Spyware, Hackern und Phishing]]
+- Kenntnisse über Gefahren von [[Schadsoftware|Viren, Würmern, Trojanern, Spyware, Hackern und Phishing]]
 - Fachbegriff [[Zero-Day-Exploit]]
 - Kenntnisse über [[Einschränkungsmöglichkeiten bei Benutzerkonten]]
 - Funktion einer Software-[[Firewall]]

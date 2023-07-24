@@ -8,8 +8,12 @@ Software, die in elektronischen Geräten und Hardwarekomponenten fest eingebette
 - Eingabe- und Ausgabesignale
 - …
 
+
 Eigenschaften
 - wird *spezifisch für Geräte und Hardware* entwickelt
 - daher meist *nicht austauschbar*
-- vom Benutzer *nicht veränderbar*
+- vom Normal-Benutzer *nicht veränderbar*
 - wird in einem nichtflüchtigen Speicher erhalten, nur in einigen Fällen sind Firmware-Updates möglich
+
+
+z.B.: Software auf Kaffeemaschine, BIOS

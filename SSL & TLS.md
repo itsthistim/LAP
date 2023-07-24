@@ -9,17 +9,11 @@ Secure Socket Layer
 - *sichere und verschlüsselte Kommunikation* zwischen dem Webserver und dem Webbrowser
 - schützt übertragenen Daten vor unbefugtem Zugriff
 - Authentifizierung des Servers durch *digitale Zertifikate*
- 
+
+
 ## SSL-Zertifikate
 Digitale Zertifikate, die *von vertrauenswürdigen Zertifizierungsstellen* (Certificate Authorities, CAs) werden ausgestellt.
 Sie *dienen zur Authentifizierung* des Webserver-Betreibers und zur *Verschlüsselung der übertragenen Daten*.
-
-
-## Symmetrische und asymmetrische Verschlüsselung
-Bei der symmetrischen Verschlüsselung wird ein gemeinsamer Schlüssel für die Datenverschlüsselung und -entschlüsselung verwendet.
-
-asymmetrischen Verschlüsselung
-- öffentlicher 
 
 
 ## Vertrauenswürdige Zertifizierungsstellen

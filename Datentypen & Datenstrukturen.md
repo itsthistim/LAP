@@ -1,6 +1,6 @@
 #Systementwicklung_Testkonzepte
 ***
-*Datentypen*: Art der Daten, die Variablen / Speicherbereich gespeichert werden können
+*Primitive Datentypen*: Art der Daten, die Variablen / Speicherbereich gespeichert werden können
 *Datenstrukturen*: beschreibt, wie Daten organisiert sind, und wie auf diese zugegriffen werden können.
 
 ## Datentypen
