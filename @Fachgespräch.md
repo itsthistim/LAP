@@ -113,14 +113,14 @@ LIST FROM ""
 ## 11) Informatik
 - Fachbegriff [[Informatik]]
 - Typen von [[Webseiten]] (statische, dynamische Webseiten)
-- Fachbegriffe [[Webblog]], [[Webshop]], [[Web-Plattform]]
+- Fachbegriffe [[Webblog, Webshop, Web-Plattform]]
 - Auszeichnungssprachen [[HTML]], [[XML]] – Fachbegriff und Einsatzgebiet
 - Kenntnisse über das [[HTML5-Grundgerüst]] mit den wichtigsten Bestandteilen
 - Fachbegriff Meta-Element/[[Metadaten]]
 - Fachbegriff [[SEO]] und Maßnahmen
 - Fachbegriff [[Cascading Style Sheets]] und deren Einsatz
 - [[Scripting]] (clientseitiges und serverseitiges Scripting)
-- Software zum Erstellen und Betrachten von Webseiten (Code-Editoren, Web-Browser, FTP-Programme, Grafikprogramme, Serversoftware)
+- [[Software zum Erstellen und Betrachten von Webseiten]] (Code-Editoren, Web-Browser, FTP-Programme, Grafikprogramme, Serversoftware)
 - Fachbegriff [[CMS]] (Einsatzgebiet, notwendige Voraussetzungen, existierende Systeme am Markt)
 - Unterschied [[FIFO]] / [[LIFO]] Prinzip
 - Fachbegriffe [[Stack]] und [[Queue]]
@@ -129,7 +129,7 @@ LIST FROM ""
 - Standards [[ANSI, ISO, IEEE]]
 - Fachbegriff [[Frame]]
 - Fachbegriff [[Webservices]] (verteiltes System für heterogene Systeme, …)
-- Kenntnisse über Standards (SOAP, WSDL, …)
+- Kenntnisse über Standards ([[SOAP, WSDL]], …)
 - Fachbegriff [[Rest API]]
 - Fachbegriff [[JSON]]
 - Fachbegriff [[Agile Softwareentwicklung]]
@@ -138,7 +138,7 @@ LIST FROM ""
 - Einsatzgebiete [[Angular JS]]
 - Einsatzgebiete [[Bootstrap]]
 - Einsatzgebiet [[jQuery]]
-- Kenntnisse über den Zugriff [[PHP]] auf mySQL-Datenbank (Dienste Server/Client)
+- Kenntnisse über den Zugriff [[PHP]] auf MySQL-Datenbank (Dienste Server/Client)
 - Fachbegriff [[Multitasking]]
 - Kenntnisse über [[mobile Webseiten]]/Optimierung für Smartphones
 - Fachbegriff [[Responsive Webdesign]], Umsetzung Kenntnisse über Konzept Mobile First

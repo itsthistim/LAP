@@ -14,7 +14,7 @@ Ein Webservice fokussiert sich rein auf den *Austausch von Daten*.
 - Kommunikation und Interaktion zwischen über ein Netzwerk verteilte Systeme
 - Anwendungen gerät- und standortunabhängig miteinander kommunizieren
 
-→ Services redirecten zu Webservice-Provider.
+→ Services redirecten zu Webservice-Provider
 
 ## Heterogene Systeme
 - Systeme unterschiedlicher Art und Technologien sind via Webservices miteinander verbunden.

@@ -10,6 +10,6 @@ So könnte man client-side scripting for komplexere Animationen, dynamische Navi
 Wenn der Code nicht beim Benutzer im Browser, sondern *am Server ausgeführt* wird, so ist das server-side scripting.
 Beispielsweise wenn *Verbindungen zu einer Datenbank* oder zu *API*s aufgestellt werden, so passiert das server-side mit Code vom Server. Beispielsweise **PHP** ist eine server-seitige Sprache.
 
-SSR - server side rendering (ASP.NET Core wird erst auf Anfrage von client-side auf server-side gerendert und ausgeschickt.)
+SSR - server side rendering (ASP.NET Core wird *erst auf Anfrage* von client-side auf server-side gerendert und ausgeschickt.)
 
 Validation, Authentication, Authorization
