@@ -84,7 +84,7 @@ LIST FROM ""
 - Kenntnisse über [[Backups|Backup-Medien und deren richtiger Lagerung]]
 
 ## 8) Informatik und Gesellschaft
-- Fachbegriff [[Big-Data]]
+- Fachbegriff [[Big Data]]
 - Fachbegriff [[Web 2.0]]
 - Fachbegriff [[Industrie 4.0]]
 - Fachbegriff [[IoT]]

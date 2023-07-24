@@ -24,7 +24,7 @@
 | ----------- | ------- | --------------- | --------------------------------------- |
 | Exa         | E       | 10<sup>18</sup> | Supercomputer, globale Netzwerke        |
 | Peta        | P       | 10<sup>15</sup> | Rechenzentren, [[Big Data]] Anwendungen |
-| Tera        | T       | 10<sup>12</sup> | Festplatten, Server, Cloud-Dienste      | 
+| Tera        | T       | 10<sup>12</sup> | Festplatten, Server, [[Cloud-Dienste]]      | 
 | Giga        | G       | 10<sup>9</sup>  | Festplatten, USB-Sticks                 |
 | Mega        | M       | 10<sup>6</sup>  |                                         |
 | Kilo        | k       | 10<sup>3</sup>  |                                         |
